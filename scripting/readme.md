@@ -44,5 +44,12 @@ print(f"Cpu cores = {cpu_cores}") # Printing the number of CPU cores in my case 
 
 ### Python scripts a DevOps engineer may use/create
 
-Here are some examples scripts used by a DevOps Engineer
-*
+####Here are some examples scripts used/created by DevOps Engineers
+* Someone wrote a script to tell them about any new departures from their team
+* A script to switch between terraform version on the go
+* To check/allocate more disk space
+* To restart specific services
+* To check current permissions
+* Deploy an application to a server
+* To pull up various inventory reports
+* 
