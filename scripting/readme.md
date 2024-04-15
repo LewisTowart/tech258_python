@@ -55,3 +55,34 @@ print(f"Cpu cores = {cpu_cores}") # Printing the number of CPU cores in my case 
 * A script that posts points from the previous days stand up
 * Health check - tells you information around current disk and CPU usage
 * To ping an IP address (e.g server) to see if it's available
+
+Here is an example of the health check script. It is important to note that they are importing other modules I don't
+have the code for but it can give a good example of what the script would look like.
+
+```
+import shutil
+import psutil
+from network import *
+
+
+def check_disk_usage(disk):
+    """Verifies that there's enough free space on disk"""
+    du = shutil.disk_usage(disk)
+    free = du.free / du.total * 100
+    return free > 20
+
+
+def check_cpu_usage():
+    """Verifies that there's enough unused CPU"""
+    usage = psutil.cpu_percent(1)
+    return usage < 75
+
+
+# If there's not enough disk, or not enough CPU, print an error
+if not check_disk_usage('/') or not check_cpu_usage():
+    print("ERROR!")
+elif check_localhost() and check_connectivity():
+    print("Everything ok")
+else:
+    print("Network checks failed")
+```
