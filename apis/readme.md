@@ -122,3 +122,9 @@ In this scenario, the server does not maintain any client state between requests
 ### What is caching?
 
 Caching is storing frequently used data in a temporary storage to speed up access and reduce the need to fetch data repeatedly from its original source. It helps improve performance by retrieving data quickly from the cache instead of fetching it from the server or database every time a request is made.
+
+Trading off capacity for speed, a cache typically stores a subset of data, in contrast to databases whose data is usually complete and durable. 
+
+An example would be web pages in your browser. When you visit a website for the first time, the browser retrieves and loads the web page content from the server. However, the browser also stores a copy of this content in its cache.
+
+If you visit the same web page again or navigate to another page on the same website, the browser first checks its cache. If the web page content is found in the cache and has not expired, the browser loads the content from the cache instead of fetching it from the server again. This results in faster page load times and reduced network traffic, especially for frequently visited websites.
