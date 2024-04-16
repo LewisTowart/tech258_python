@@ -13,8 +13,8 @@ if len(sys.argv) > 1: # do we have more than 1 argument?
 else:
     print("Usage: python check_json.py <file>")
 
-with open('output.yaml', 'w') as yaml_file:
+with open(sys.argv[2], 'w') as yaml_file:
     yaml.dump(configuration, yaml_file)
 
-with open('output.yaml', 'r') as yaml_file:
+with open(sys.argv[2], 'r') as yaml_file:
     print(yaml_file.read())

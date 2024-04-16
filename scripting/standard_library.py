@@ -30,13 +30,13 @@ import requests
 # working_dir = os.getcwd()
 # print(f"Current working directory is: {working_dir}")
 
-# get user
-username = os.environ.get("USERNAME") or os.environ.get("USER")
-print(f"Username is: {username}")
-
-# cpu cores
-cpu_cores = os.cpu_count()
-print(f"Cpu cores = {cpu_cores}")
+# # get user
+# username = os.environ.get("USERNAME") or os.environ.get("USER")
+# print(f"Username is: {username}")
+#
+# # cpu cores
+# cpu_cores = os.cpu_count()
+# print(f"Cpu cores = {cpu_cores}")
 
 # sys demo
 
